@@ -1,0 +1,448 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+      font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+  margin-bottom: 60px;
+  font-family: Arial, sans-serif;
+}
+
+.container, .mycontainer {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: none;
+  padding: 0;
+  margin-top: 30px;
+  background-color: rgba(33, 37, 41);
+}
+
+.header {
+  border-radius: 30px;
+}
+
+.mycontainer {
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 40vh;
+  background-image: repeating-radial-gradient(#18E96C, #008877);
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.text-content {
+  color: white;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(100% - 70px);
+  max-width: 40%;
+  margin-right: 20px;
+  margin-left: 50px;
+  box-sizing: border-box;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+  .text-content h1 {
+      font-size: 40px; /* Increase the font size for the h1 element */
+      margin-bottom: 20px; /* Add some margin for spacing */
+  }
+
+  .text-content p {
+      font-size: 20px; /* Increase the font size for paragraphs */
+      line-height: 1.5; /* Adjust line height for readability */
+      margin-bottom: 15px; /* Add some margin for spacing */
+  }
+
+.imgbrand {
+  max-width: 500px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .image-content img {
+      max-width: 100%;
+      height: auto;
+      max-height: 600px;
+      border-radius: 10px;
+      min-width: 300px;
+  }
+
+@media (max-width: 1000px) {
+  .image-content img {
+      display: none;
+  }
+
+  .text-content {
+      margin-left: 20px;
+      margin-right: 10px;
+      max-width: 100%;
+  }
+}
+
+.event-info {
+  color: #fff;
+  text-align: center;
+  padding: 60px;
+  background: none;
+}
+
+.countdown-label, .registration-label {
+  font-size: 1.5em;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.countdown-timer {
+  color: #38BDAC;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 8px 0;
+  display: inline-block;
+}
+
+  .countdown-timer span {
+      margin-right: 10px;
+  }
+
+.registration-count {
+  color: #38BDAC;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.agenda-container {
+  margin-bottom: 120px;
+}
+
+.agenda-title,
+.speakers-title {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .countdown-label, .registration-label {
+      font-size: 1em;
+  }
+
+  .countdown-timer {
+      font-size: 1.5em;
+  }
+
+  .registration-count {
+      font-size: 2em;
+  }
+
+  .agenda-title {
+      font-size: 1em;
+  }
+}
+
+.agenda {
+  border-radius: 30px;
+  background-image: repeating-radial-gradient(#18E96C, #008877);
+  padding: 20px;
+  color: white;
+}
+
+.agenda-header {
+  display: flex;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.agenda-column-header {
+  flex: 1;
+  text-align: left;
+}
+
+.agenda-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.agenda-date {
+  flex-basis: 20%;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.agenda-details {
+  max-width: 1000px;
+  flex-basis: 80%;
+}
+
+.agenda-event-title {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.agenda-time {
+  margin-top: 0;
+}
+
+.agenda-divider {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.speakers-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.speakers-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.speaker-card {
+  display: inline-block;
+  width: 250px;
+  height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  text-align: left;
+  margin-right: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.speaker-image {
+  flex: 0 0 150px;
+  width: 100%;
+  height: 60%;
+  background-color: #f0f0f0;
+}
+
+  .speaker-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+.speaker-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%;
+}
+.bg-dark {
+  background-color: rgba(33, 37, 41);
+  padding: 40px;
+}
+.bg-dark-im {
+  background-color: rgba(33, 37, 41);
+  padding: 20px;
+}
+.speaker-name {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+}
+
+.speaker-title {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.btn-view {
+  font-size: 17px;
+  color: #38BDAC;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  transition: font-size 0.3s ease;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+  .btn-view:hover,
+  .btn-view:focus {
+      font-size: 19px;
+      color: #008877;
+  }
+
+.c-flipper {
+  margin: 10px;
+  font-weight: bold;
+  color: #008877;
+  font-size: 24px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  opacity: 0.8;
+  display: inline-block;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid transparent;
+}
+
+.c-carousel .c-flipper {
+  position: absolute;
+  z-index: 100;
+}
+
+.c-carousel .f-previous {
+  left: 10px;
+}
+
+.c-carousel .f-next {
+  right: 10px;
+}
+
+.c-carousel.f-scrollable-previous .c-flipper {
+  display: block;
+}
+
+.c-flipper:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 26px;
+  color: #015B50;
+  font-size: 26px;
+}
+.btn-register {
+  font-weight: bold;
+  background-color: white;
+  color: #008877;
+  padding: 20px 35px;
+  font-size: 25px;
+  text-transform: uppercase;
+  border-radius: 40px;
+  transition: all 0.3s;
+  box-shadow: none;
+  text-decoration: none;
+  margin-bottom: 20px;
+  border: 4px solid #008877;
+}
+
+
+  .btn-register:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      font-size: 26px;
+      color: #015B50;
+      border: 4px solid #015B50;
+  }
+
+.logos {
+  margin-top:40px;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.img-i1 {
+  max-height: 400px;
+  margin: 0 10px;
+}
+
+.img-i2 {
+  max-height: 250px;
+  margin: 0 10px;
+}
+
+.img-i3 {
+  max-height: 200px;
+  margin: 0 10px;
+}
+
+.img-i4 {
+  max-height: 300px;
+  margin: 0 10px;
+}
