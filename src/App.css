@@ -1,45 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
 html {
   font-size: 14px;
 }
@@ -106,14 +65,14 @@ body {
 }
 
   .text-content h1 {
-      font-size: 40px; /* Increase the font size for the h1 element */
-      margin-bottom: 20px; /* Add some margin for spacing */
+      font-size: 40px;
+      margin-bottom: 20px; 
   }
 
   .text-content p {
-      font-size: 20px; /* Increase the font size for paragraphs */
-      line-height: 1.5; /* Adjust line height for readability */
-      margin-bottom: 15px; /* Add some margin for spacing */
+      font-size: 20px; 
+      line-height: 1.5; 
+      margin-bottom: 15px; 
   }
 
 .imgbrand {
@@ -195,22 +154,12 @@ body {
   padding-left: 10px;
 }
 
-@media (max-width: 768px) {
-  .countdown-label, .registration-label {
-      font-size: 1em;
-  }
 
-  .countdown-timer {
-      font-size: 1.5em;
-  }
-
-  .registration-count {
-      font-size: 2em;
-  }
-
-  .agenda-title {
-      font-size: 1em;
-  }
+.language-selector {
+  position: absolute;
+  top: 20;
+  right: 20px;
+  text-align: center;
 }
 
 .agenda {
@@ -326,6 +275,10 @@ body {
   margin: 0;
 }
 
+.space{
+  margin-right: 20px;
+}
+
 .speaker-title {
   font-size: 14px;
   color: #333;
@@ -349,6 +302,22 @@ body {
       font-size: 19px;
       color: #008877;
   }
+
+.lg-but{
+ background-color: rgba(33, 37, 41);
+ align-items: center;
+ color: white;
+ font-size: 20px;
+
+}
+
+.lg-but:hover{
+  border: 1px solid transparent;
+  background-color: rgba(33, 37, 41);
+  color: white;
+  font-size: 22px;
+ }
+ 
 
 .c-flipper {
   margin: 10px;
@@ -445,4 +414,136 @@ body {
 .img-i4 {
   max-height: 300px;
   margin: 0 10px;
+}
+@media (max-width: 768px) {
+
+  .btn-register {   
+    margin-bottom: 10px;
+    border: 2px solid #008877;
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+
+  .imgbrand {
+    max-width: 300px;
+    height: auto;
+    margin-left: 10px;
+  }
+
+.bg-dark-im{
+  max-width: 80%;
+}
+
+  .countdown-label, .registration-label {
+      font-size: 1em;
+  }
+  .countdown-timer {
+      font-size: 1.5em;
+  }
+
+  .registration-count {
+      font-size: 2em;
+  }
+
+  .agenda-title {
+      font-size: 2em;
+  }  
+  .speakers-title {
+    font-size: 12m;
+}
+  .text-content h1 {
+      font-size: 20px; 
+  }
+
+  .text-content p {
+      font-size: 15px; 
+  }
+  .mycontainer {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+  .event-info{
+    width: 90%;
+    align-items: center;
+  }
+
+  .image-content img {
+
+    display: block;
+    max-width: 40%; 
+    height: auto;
+    margin-bottom: 7px;
+  }
+  .language-selector {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+  }
+
+  .lg-but {
+    font-size: 14px; 
+  }
+
+  .agenda-container {
+    max-width: 90%; 
+  }
+
+  .agenda-date {
+    margin-bottom: 10px; 
+  }
+
+  .speaker-card {
+    width: 30vw; 
+    height: 60vw; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: left;
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 10px; 
+    overflow: hidden;
+  }
+  .speaker-card p {
+    font-size: 11px; 
+  }
+  .speaker-card h5 {
+    font-size: 14px; 
+  }
+  .btn-view {
+    font-size: 1px; 
+  }
+
+  .img-i1 {
+    max-width: 40%;
+    margin: 0 3px;
+  }
+  
+  .img-i2 {
+    max-width: 20%;
+    margin: 0 3px;
+  }
+  
+  .img-i3 {
+    max-width: 20%;
+    margin: 0 3px;
+  }
+  
+  .img-i4 {
+    max-width: 20%;
+    margin: 0 3px;
+  }
+
+  .logos{
+    padding-left: 0px;
+    max-width: 500px;
+  }
+  .btn-register:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    color: #015B50;
+    border: 2px solid #015B50;
+}
+
 }
