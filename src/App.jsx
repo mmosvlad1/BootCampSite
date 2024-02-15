@@ -10,6 +10,34 @@ import './i18n';
 function App() {
   const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();
+  const [registerLink, setRegisterLink] = useState('');
+  const [imageUrl, setImageUrl] = useState('https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg'); 
+  const [imClassName, setImClassName] = useState('img-i4');
+
+  useEffect(() => {
+    const hostname = window.location.hostname;
+    
+    let link;
+    
+    if (hostname === "lnu.azurebootcamp.uitware.com") {
+      link = "link_for_lnu";
+      imageUrl = "https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg"; 
+      imClassName="img-i4"
+    } else if (hostname === "ucu.azurebootcamp.uitware.com") {
+      link = "link_for_ucu";
+      imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2c/UkrainianCatholicUniversitylogo.png";
+      imClassName="img-i1"  
+    } else if (hostname === "lp.azurebootcamp.uitware.com") {
+      link = "link_for_lp";
+      imageUrl = "https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg"; 
+      imClassName="img-i2"
+    } else {
+      link = "default_link";
+    }
+    
+
+    setRegisterLink(link);
+  }, []);
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
@@ -99,7 +127,7 @@ function App() {
             <p>{t("PartnershipDetails")}</p>
             <p>{t("ParticipationOpportunity")}</p>
             <p>{t("UniversityDetermination")}</p>
-            <a id="registerBtn" href="" className="btn-register" target="_blank">{t("RegisterButton")}</a>
+            <a id="registerBtn"  href={registerLink} className="btn-register" target="_blank">{t("RegisterButton")}</a>
           </div>
           <div className="image-content">
             <img src={cloudImage} alt="Main Logo" />
@@ -241,10 +269,8 @@ function App() {
         </div>
 
         <div className="logos">
-          <img className="img-i4" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/UkrainianCatholicUniversitylogo.png" alt="Logo 4" />
-          <img className="img-i2" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg" alt="Logo 2" />
+          <img className={imClassName} src={imageUrl} alt="Logo" />
           <img className="img-i3" src="https://media.licdn.com/dms/image/D4D0BAQH3q-WlTfehSw/company-logo_200_200/0/1667339151545/uitware_logo?e=1714003200&v=beta&t=vxCsa60KT9h1aUPJqFzLxsy5evIMR3xj0X8V-b1M70k" alt="Logo 3" />
-          <img className="img-i1" src="https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg" alt="Logo 1" />
         </div>
       </div>
     </div>

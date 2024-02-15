@@ -315,7 +315,7 @@ body {
   border: 1px solid transparent;
   background-color: rgba(33, 37, 41);
   color: white;
-  font-size: 22px;
+  font-size: 21px;
  }
  
 
@@ -431,7 +431,7 @@ body {
   }
 
 .bg-dark-im{
-  max-width: 80%;
+  max-width: 100%;
 }
 
   .countdown-label, .registration-label {
@@ -485,6 +485,9 @@ body {
   .lg-but {
     font-size: 14px; 
   }
+  .lg-but:hover {
+    font-size: 14.5px; 
+  }
 
   .agenda-container {
     max-width: 90%; 
@@ -516,12 +519,12 @@ body {
   }
 
   .img-i1 {
-    max-width: 40%;
+    max-width: 30%;
     margin: 0 3px;
   }
   
   .img-i2 {
-    max-width: 20%;
+    max-width: 30%;
     margin: 0 3px;
   }
   
@@ -531,7 +534,7 @@ body {
   }
   
   .img-i4 {
-    max-width: 20%;
+    max-width: 50%;
     margin: 0 3px;
   }
 
