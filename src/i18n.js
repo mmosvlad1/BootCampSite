@@ -6,8 +6,8 @@ const resources = {
   en: {
     translation: {
       "BoostTitle": "Boost yourself with Uitware Azure Bootcamp",
-      "EmpowermentMessage": "We believe that every person and organization on the planet can be empowered to achieve more. Join us in March 4, 2024, to seize the opportunity to learn from local experts at the free Uitware Azure Bootcamp.",
-      "PartnershipDetails": "In partnership with \"Ukrainian Catholic University,\" \"Lviv Polytechnic National University,\" and \"Ivan Franko National University of Lviv,\" we have launched Azure Bootcamp for students, providing industry knowledge from Microsoft and insights from global experts.",
+      "EmpowermentMessage": "We believe that every person and organization on the planet can be empowered to achieve more. Join us in March 4, 2024, to seize the opportunity to learn from experts at the free Uitware Azure Bootcamp.",
+      "PartnershipDetails": "In partnership with \"Ukrainian Catholic University\", \"Lviv Polytechnic National University\", and \"Ivan Franko National University of Lviv\", we have launched Azure Bootcamp for students, providing industry knowledge from Microsoft and insights from global experts.",
       "ParticipationOpportunity": "By participating in Uitware Azure Bootcamp, students will have the opportunity to earn additional credits for specific academic subjects*.",
       "UniversityDetermination": "* The University determines the exact academic subjects.",
       "RegisterButton": "Register",
@@ -51,10 +51,10 @@ const resources = {
   uk: {
     translation: {
       "BoostTitle": "Підвищуй свої навички з Uitware Azure Bootcamp",
-      "EmpowermentMessage": "Ми віримо, що кожна людина та організація на планеті може бути наділена силою досягати більшого. Приєднуйтеся до нас 4 березня 2024 року, щоб скористатися можливістю вчитися у місцевих експертів на безкоштовному Uitware Azure Bootcamp.",
-      "PartnershipDetails": "У партнерстві з Українським Католицьким Університетом, Національним університетом \"Львівська політехніка\" та Львівський національний університетом імені Івана Франка ми запустили Azure Bootcamp. У рамках цього партнерства ми надаємо студентам доступ до професійних знань у сфері ІТ від Microsoft та цінних відомостей від провідних світових експертів.",
+      "EmpowermentMessage": "Ми віримо, що кожна людина та організація на планеті може бути наділена силою досягати більшого. Приєднуйтеся до нас 4 березня 2024 року, щоб скористатися можливістю вчитися у експертів на безкоштовному Uitware Azure Bootcamp.",
+      "PartnershipDetails": "У партнерстві з Українським Католицьким Університетом, Національним університетом \"Львівська політехніка\" та Львівський національний університетом імені Івана Франка ми запустили Azure Bootcamp. У рамках цього партнерства ми надаємо студентам можливість професійного зростання у сфері ІТ з технологіями від Microsoft та знаннями від провідних світових експертів.",
       "ParticipationOpportunity": "Участь у Uitware Azure Bootcamp дасть студентам можливість отримати додаткові кредити за окремі академічні предмети*.",
-      "UniversityDetermination": "* Університет визначає точні академічні предмети.",
+      "UniversityDetermination": "* Університет визначає академічні предмети.",
       "RegisterButton": "Зареєструватися",
       "TimeLeftLabel": "Час до початку навчання",
       "Days": "днів",
