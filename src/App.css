@@ -255,10 +255,10 @@ body {
   }
 
 .speaker-info {
+  position: relative; 
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 30%;
 }
 .bg-dark {
@@ -286,10 +286,11 @@ body {
 }
 
 .btn-view {
+  position: absolute; /* Абсолютне позиціонування */
+  bottom: 5px; /* Встановлено фіксовану позицію знизу */
+  left: 20px;
   font-size: 17px;
   color: #38BDAC;
-  margin-top: 20px;
-  margin-bottom: 10px;
   text-transform: uppercase;
   transition: font-size 0.3s ease;
   display: block;
@@ -459,7 +460,7 @@ body {
       font-size: 15px; 
   }
   .mycontainer {
-    width: 90%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 5px;
@@ -479,7 +480,7 @@ body {
   .language-selector {
     position: absolute;
     top: 20px;
-    left: 250px;
+    left: 450px;
   }
 
   .lg-but {
@@ -490,7 +491,7 @@ body {
   }
 
   .agenda-container {
-    max-width: 90%; 
+    max-width: 100%; 
   }
 
   .agenda-date {
@@ -515,7 +516,12 @@ body {
     font-size: 14px; 
   }
   .btn-view {
-    font-size: 1px; 
+    font-size: 14px; 
+  }
+  .btn-view:hover,
+  .btn-view:focus {
+      font-size: 15px;
+      color: #008877;
   }
 
   .img-i1 {

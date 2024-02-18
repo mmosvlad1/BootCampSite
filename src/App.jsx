@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import cloudImage from './assets/Cloud.webp';
 import './App.css';
 import nu1 from './assets/nu1.png';
+import nu2 from './assets/nu2.jpg';
+import nu3 from './assets/nu3.jpg';
 import brand from './assets/brand.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
@@ -260,6 +262,30 @@ function App() {
                     <p className="speaker-title">{t("Speaker1Title")}</p>
                     <p className="speaker-title">{t("Speaker1Title1")}</p>
                     <a href="https://www.linkedin.com/in/andriy-bilous-32718aa7/" className="btn-view">{t("ViewProfile")}</a>
+                  </div>
+                </div>
+                {/* Speaker 2 */}
+                <div className="speaker-card">
+                  <div className="speaker-image">
+                    <img src={nu2} alt="Orest Lavriv" />
+                  </div>
+                  <div className="speaker-info">
+                    <h5 className="speaker-name">{t("Speaker2Name")}</h5>
+                    <p className="speaker-title">{t("Speaker2Title")}</p>
+                    <p className="speaker-title">{t("Speaker2Title1")}</p>
+                    <a href="https://www.linkedin.com/in/orest-l-74925992/" className="btn-view">{t("ViewProfile")}</a>
+                  </div>
+                </div>
+                 {/* Speaker 3 */}
+                 <div className="speaker-card">
+                  <div className="speaker-image">
+                    <img src={nu3} alt="Stanislav Lebedenko" />
+                  </div>
+                  <div className="speaker-info">
+                    <h5 className="speaker-name">{t("Speaker3Name")}</h5>
+                    <p className="speaker-title">{t("Speaker3Title")}</p>
+                    <p className="speaker-title">{t("Speaker3Title1")}</p>
+                    <a href="https://www.linkedin.com/in/lebedenkostanislav/" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
               </div>

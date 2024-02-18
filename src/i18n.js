@@ -44,6 +44,12 @@ const resources = {
       "Speaker1Name": "Andriy Bilous",
       "Speaker1Title": "Chief Operation Officer at Uitware,",
       "Speaker1Title1": "Microsoft MVP",
+      "Speaker2Name": "Orest Lavriv",
+      "Speaker2Title": "Cloud & DevOps Systems Architect",
+      "Speaker2Title1": "",
+      "Speaker3Name": "Stanislav Lebedenko",
+      "Speaker3Title": "Cloud Architect, Microsoft MVP,",
+      "Speaker3Title1": "Platform Engineer, DevOps",
       "ViewProfile": "View Profile",
 
     }
@@ -86,9 +92,15 @@ const resources = {
       "AzureDataServices": "Основи роботи з даними в Azure",
       "AzureDataServicesDescription": "Описує сервіси по роботі з даними в Microsoft Azure включаючи реляційні та нереляційні бази даних, сервіси аналітики та обробки даних, а також концепцію великих даних.",
       "FeaturedSpeakers": "Спікери",
-      "Speaker1Name": "Андрій Білоус",
-      "Speaker1Title": "Операційний Директор Uitware,",
+      "Speaker1Name": "Andriy Bilous",
+      "Speaker1Title": "Chief Operation Officer at Uitware,",
       "Speaker1Title1": "Microsoft MVP",
+      "Speaker2Name": "Orest Lavriv",
+      "Speaker2Title": "Cloud & DevOps Systems Architect",
+      "Speaker2Title1": "",
+      "Speaker3Name": "Stanislav Lebedenko",
+      "Speaker3Title": "Cloud Architect, Microsoft MVP,",
+      "Speaker3Title1": "Platform Engineer, DevOps",
       "ViewProfile": "Переглянути Профіль",
       
     }
