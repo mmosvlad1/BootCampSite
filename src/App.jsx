@@ -23,23 +23,23 @@ function App() {
     
     if (hostname === "lnu.azurebootcamp.uitware.com") {
       link = "link_for_lnu";
-      imageUrl = "https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg"; 
-      imClassName="img-i4"
+      setImageUrl("https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg"); 
+      setImClassName("img-i4");
     } else if (hostname === "ucu.azurebootcamp.uitware.com") {
       link = "link_for_ucu";
-      imageUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2c/UkrainianCatholicUniversitylogo.png";
-      imClassName="img-i1"  
+      setImageUrl("https://upload.wikimedia.org/wikipedia/commons/2/2c/UkrainianCatholicUniversitylogo.png");
+      setImClassName("img-i1");
     } else if (hostname === "lp.azurebootcamp.uitware.com") {
       link = "link_for_lp";
-      imageUrl = "https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg"; 
-      imClassName="img-i2"
+      setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg"); 
+      setImClassName("img-i2");
     } else {
       link = "default_link";
     }
-    
-
+  
     setRegisterLink(link);
   }, []);
+  
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
