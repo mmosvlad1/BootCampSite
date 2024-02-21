@@ -109,7 +109,6 @@ function App() {
         <button className="lg-but" onClick={() => handleLanguageChange('en')}>EN</button>
         <button className="lg-but" onClick={() => handleLanguageChange('uk')}>UA</button>
       </div>
-      <img className="imgml" src={ml} alt="microsoft logo" />
       <img className="imgbrand" src={brand} alt="U+ Azure Bootcamp" />
       <div className="bg-dark">
         <div className="mycontainer">
