@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import cloudImage from './assets/Cloud.webp';
+import cloudImage from './assets/main_p.png';
 import './App.css';
 import nu1 from './assets/nu1.png';
 import nu2 from './assets/nu2.jpg';

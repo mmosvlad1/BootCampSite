@@ -98,7 +98,7 @@ body {
       height: auto;
       max-height: 600px;
       border-radius: 10px;
-      min-width: 300px;
+      min-width: 700px;
   }
 
 @media (max-width: 1000px) {
@@ -472,7 +472,7 @@ body {
 
 
 .bg-dark-im{
-  max-width: 605px
+  max-width: 100%
 }
 .bg-dark {
   min-width: 100%;
