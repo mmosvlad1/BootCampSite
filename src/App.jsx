@@ -16,25 +16,26 @@ function App() {
   const [registerLink, setRegisterLink] = useState('');
   const [imageUrl, setImageUrl] = useState('https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg'); 
   const [imClassName, setImClassName] = useState('img-i4');
-  const [reflink, link] = useState('https://forms.gle/8jzSJqPvCModTfNHA');
 
   useEffect(() => {
     const hostname = window.location.hostname;
     
+    let link;
+    
     if (hostname === "lnu.azurebootcamp.uitware.com") {
-      reflink = "https://forms.gle/8jzSJqPvCModTfNHA";
+      link = "https://forms.gle/8jzSJqPvCModTfNHA";
       setImageUrl("https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg"); 
       setImClassName("img-i4");
     } else if (hostname === "ucu.azurebootcamp.uitware.com") {
-      reflink = "http://study.ucu.org.ua/course/azure-bootcamp/start";
+      link = "http://study.ucu.org.ua/course/azure-bootcamp/start";
       setImageUrl("https://upload.wikimedia.org/wikipedia/commons/2/2c/UkrainianCatholicUniversitylogo.png");
       setImClassName("img-i1");
     } else if (hostname === "lp.azurebootcamp.uitware.com") {
-      reflink = "https://forms.gle/8jzSJqPvCModTfNHA";
+      link = "https://forms.gle/8jzSJqPvCModTfNHA";
       setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg"); 
       setImClassName("img-i2");
     } else {
-      reflink = "default_link";
+      link = "default_link";
     }
   
     setRegisterLink(link);
@@ -130,7 +131,7 @@ function App() {
             <p>{t("PartnershipDetails")}</p>
             <p>{t("ParticipationOpportunity")}</p>
             <p>{t("UniversityDetermination")}</p>
-            <a id="registerBtn"  href={reflink} className="btn-register" target="_blank">{t("RegisterButton")}</a>
+            <a id="registerBtn"  href={registerLink} className="btn-register" target="_blank">{t("RegisterButton")}</a>
           </div>
           <div className="image-content">
             <img src={cloudImage} alt="Main Logo" />
