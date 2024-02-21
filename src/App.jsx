@@ -78,7 +78,7 @@ function App() {
 
     if (direction === 'next') {
       container.scrollLeft += scrollAmount;
-    } else {
+    } else if (direction === 'prev') {
       container.scrollLeft -= scrollAmount;
     }
     container.scrollTo({
@@ -102,18 +102,6 @@ function App() {
     prevButton.style.display = containerScrollLeft > 0 ? 'block' : 'none';
     nextButton.style.display = containerScrollLeft < containerScrollWidth - containerClientWidth ? 'block' : 'none';
   }
-
-  useEffect(() => {
-    checkFlipperVisibility();
-    const speakersContainer = document.querySelector('.speakers-container');
-    speakersContainer.addEventListener('scroll', checkFlipperVisibility);
-
-    return () => {
-      speakersContainer.removeEventListener('scroll', checkFlipperVisibility);
-    };
-  }, []);
-
-
 
   return (
     <div className="bg-dark-im">
@@ -158,16 +146,17 @@ function App() {
             </div>
             {/* Introduction to Azure Cloud */}
             <div className="agenda-item">
-              <div className="agenda-date">04 {t("March")}</div>
+              <div className="agenda-date">04-08 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("IntroductionToAzureCloud")}</h3>
+                <h3 className="agenda-event-title">Andriy Bilous</h3>
                 <p className="agenda-description">{t("IntroductionToAzureCloudDescription")}</p>
               </div>
             </div>
             <hr className="agenda-divider" />
             {/* Azure Management */}
             <div className="agenda-item">
-              <div className="agenda-date">11 {t("March")}</div>
+              <div className="agenda-date">11-15 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureManagement")}</h3>
                 <p className="agenda-description">{t("AzureManagementDescription")}</p>
@@ -176,7 +165,7 @@ function App() {
             <hr className="agenda-divider" />
             {/* Azure Cloud Application Development */}
             <div className="agenda-item">
-              <div className="agenda-date">18 {t("March")}</div>
+              <div className="agenda-date">18-22 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureCloudApplicationDevelopment")}</h3>
                 <p className="agenda-description">{t("AzureCloudApplicationDevelopmentDescription")}</p>
@@ -185,25 +174,27 @@ function App() {
             <hr className="agenda-divider" />
             {/* Azure Architecture Components and Services */}
             <div className="agenda-item">
-              <div className="agenda-date">25 {t("March")}</div>
+              <div className="agenda-date">25-29 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureArchitectureComponentsAndServices")}</h3>
+                <h2 className="agenda-event-title">Stanislav Lebedenko</h2>
                 <p className="agenda-description">{t("AzureArchitectureComponentsAndServicesDescription")}</p>
               </div>
             </div>
             <hr className="agenda-divider" />
             {/* Architectural Solutions in Azure */}
             <div className="agenda-item">
-              <div className="agenda-date">01 {t("April")}</div>
+              <div className="agenda-date">01-05 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("ArchitectingSolutionsOnAzure")}</h3>
+                <h2 className="agenda-event-title">Orest Lavriv</h2>
                 <p className="agenda-description">{t("ArchitectingSolutionsOnAzureDescription")}</p>
               </div>
             </div>
             <hr className="agenda-divider" />
             {/* Azure Automation */}
             <div className="agenda-item">
-              <div className="agenda-date">08 {t("April")}</div>
+              <div className="agenda-date">08-12 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureAutomation")}</h3>
                 <p className="agenda-description">{t("AzureAutomationDescription")}</p>
@@ -212,7 +203,7 @@ function App() {
             <hr className="agenda-divider" />
             {/* Azure DevOps Services */}
             <div className="agenda-item">
-              <div className="agenda-date">15 {t("April")}</div>
+              <div className="agenda-date">15-19 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureDevOpsServices")}</h3>
                 <p className="agenda-description">{t("AzureDevOpsServicesDescription")}</p>
@@ -221,7 +212,7 @@ function App() {
             <hr className="agenda-divider" />
             {/* Azure Security and Privacy */}
             <div className="agenda-item">
-              <div className="agenda-date">22 {t("April")}</div>
+              <div className="agenda-date">22-26 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureSecurityAndPrivacy")}</h3>
                 <p className="agenda-description">{t("AzureSecurityAndPrivacyDescription")}</p>
@@ -230,7 +221,7 @@ function App() {
             <hr className="agenda-divider" />
             {/* Azure AI Concepts */}
             <div className="agenda-item">
-              <div className="agenda-date">29 {t("April")}</div>
+              <div className="agenda-date">29.04-03.05</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureAIConcepts")}</h3>
                 <p className="agenda-description">{t("AzureAIConceptsDescription")}</p>
@@ -239,7 +230,7 @@ function App() {
             <hr className="agenda-divider" />
             {/* Fundamentals of Working with Data in Azure */}
             <div className="agenda-item">
-              <div className="agenda-date">06 {t("May")}</div>
+              <div className="agenda-date">06-10 {t("May")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureDataServices")}</h3>
                 <p className="agenda-description">{t("AzureDataServicesDescription")}</p>
@@ -251,7 +242,7 @@ function App() {
         <div className="speakers">
           <h2 className="speakers-title">{t("FeaturedSpeakers")}</h2>
           <div className="speakers-wrapper">
-            <button className="c-flipper f-previous" aria-label="Previous">&lt;</button>
+
             <div className="speakers-container">
               <div className="speaker-cards-row">
                                 {/* Speaker 1 */}
@@ -290,10 +281,9 @@ function App() {
                     <a href="https://www.linkedin.com/in/lebedenkostanislav/" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
-
-              </div>
+                </div>
             </div>
-            <button className="c-flipper f-next" aria-label="Next">&gt;</button>
+
           </div>
         </div>
 

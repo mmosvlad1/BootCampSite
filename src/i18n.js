@@ -42,14 +42,14 @@ const resources = {
       "AzureDataServicesDescription": "This module covers data services in Microsoft Azure, including relational and non-relational databases, analytics services, data processing, as well as the concept of big data.",
       "FeaturedSpeakers": "Featured Speakers",
       "Speaker1Name": "Andriy Bilous",
-      "Speaker1Title": "Chief Operation Officer at Uitware,",
+      "Speaker1Title": "CEO at Uitware,",
       "Speaker1Title1": "Microsoft MVP",
       "Speaker2Name": "Orest Lavriv",
       "Speaker2Title": "Cloud & DevOps Systems Architect",
-      "Speaker2Title1": "",
+      "Speaker2Title1": "at EPAM",
       "Speaker3Name": "Stanislav Lebedenko",
-      "Speaker3Title": "Cloud Architect, Microsoft MVP,",
-      "Speaker3Title1": "Platform Engineer, DevOps",
+      "Speaker3Title": "Cloud Architect at Solidify,",
+      "Speaker3Title1": "Microsoft MVP",
       "ViewProfile": "View Profile",
 
     }
