@@ -4,6 +4,7 @@ import './App.css';
 import nu1 from './assets/nu1.png';
 import nu2 from './assets/nu2.jpg';
 import nu3 from './assets/nu3.jpg';
+import ml from './assets/ml.png';
 import brand from './assets/brand.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
@@ -22,15 +23,15 @@ function App() {
     let link;
     
     if (hostname === "lnu.azurebootcamp.uitware.com") {
-      link = "link_for_lnu";
+      link = "https://forms.gle/8jzSJqPvCModTfNHA";
       setImageUrl("https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg"); 
       setImClassName("img-i4");
     } else if (hostname === "ucu.azurebootcamp.uitware.com") {
-      link = "link_for_ucu";
+      link = "http://study.ucu.org.ua/course/azure-bootcamp/start";
       setImageUrl("https://upload.wikimedia.org/wikipedia/commons/2/2c/UkrainianCatholicUniversitylogo.png");
       setImClassName("img-i1");
     } else if (hostname === "lp.azurebootcamp.uitware.com") {
-      link = "link_for_lp";
+      link = "https://forms.gle/8jzSJqPvCModTfNHA";
       setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg"); 
       setImClassName("img-i2");
     } else {
@@ -120,6 +121,7 @@ function App() {
         <button className="lg-but" onClick={() => handleLanguageChange('en')}>EN</button>
         <button className="lg-but" onClick={() => handleLanguageChange('uk')}>UA</button>
       </div>
+      <img className="imgml" src={ml} alt="microsoft logo" />
       <img className="imgbrand" src={brand} alt="U+ Azure Bootcamp" />
       <div className="bg-dark">
         <div className="mycontainer">
@@ -252,8 +254,8 @@ function App() {
             <button className="c-flipper f-previous" aria-label="Previous">&lt;</button>
             <div className="speakers-container">
               <div className="speaker-cards-row">
-                {/* Speaker 1 */}
-                <div className="speaker-card">
+                                {/* Speaker 1 */}
+                                <div className="speaker-card">
                   <div className="speaker-image">
                     <img src={nu1} alt="Andriy Bilous" />
                   </div>
@@ -288,6 +290,7 @@ function App() {
                     <a href="https://www.linkedin.com/in/lebedenkostanislav/" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
+
               </div>
             </div>
             <button className="c-flipper f-next" aria-label="Next">&gt;</button>

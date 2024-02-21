@@ -26,11 +26,11 @@ body {
 
 .container, .mycontainer {
   box-sizing: border-box;
-  width: 90%;
+  max-width: 90%;
   max-width: none;
   padding: 0;
   margin-top: 30px;
-  background-color: rgba(33, 37, 41);
+  background-color: #212529;
 }
 
 .header {
@@ -79,6 +79,11 @@ body {
   max-width: 500px;
   height: auto;
   margin-left: 20px;
+}
+.imgml {
+  max-width: 50px;
+  height: auto;
+  margin-left: 10px;
 }
 
 .image-content {
@@ -158,7 +163,7 @@ body {
 .language-selector {
   position: absolute;
   top: 20;
-  right: 20px;
+  right: 1px;
   text-align: center;
 }
 
@@ -227,6 +232,7 @@ body {
   padding: 20px 20px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  max-width: 95%;
 }
 
 .speaker-card {
@@ -255,52 +261,56 @@ body {
   }
 
 .speaker-info {
+  --base-font-size: 9px;
   position: relative; 
   padding: 20px;
   display: flex;
   flex-direction: column;
   height: 30%;
+  font-size: var(--base-font-size);
 }
 .bg-dark {
   background-color: rgba(33, 37, 41);
-  padding: 40px;
+  padding: 0px;
 }
 .bg-dark-im {
   background-color: rgba(33, 37, 41);
   padding: 20px;
 }
-.speaker-name {
-  font-size: 22px;
+.speaker-name, .speaker-title {
+  word-wrap: break-word; 
+  width: 100%;
   color: #333;
-  margin: 0;
 }
+
 
 .space{
   margin-right: 20px;
 }
-
+.speaker-name {
+  font-size: calc(1em + 0.6vw);
+  margin: 0;
+}
 .speaker-title {
-  font-size: 14px;
-  color: #333;
+  font-size: calc(1em + 0.27vw);
   margin: 5px 0;
 }
 
 .btn-view {
-  position: absolute; /* Абсолютне позиціонування */
-  bottom: 5px; /* Встановлено фіксовану позицію знизу */
+  position: absolute; 
+  bottom: 5px;
   left: 20px;
-  font-size: 17px;
   color: #38BDAC;
   text-transform: uppercase;
   transition: font-size 0.3s ease;
   display: block;
-  width: 100%;
+  font-size: calc(1em + 0.48vw);
   box-sizing: border-box;
 }
 
   .btn-view:hover,
   .btn-view:focus {
-      font-size: 19px;
+    font-size: calc(1em + 0.5vw);
       color: #008877;
   }
 
@@ -315,8 +325,7 @@ body {
 .lg-but:hover{
   border: 1px solid transparent;
   background-color: rgba(33, 37, 41);
-  color: white;
-  font-size: 21px;
+  color: rgb(197, 197, 197);
  }
  
 
@@ -416,23 +425,43 @@ body {
   max-height: 300px;
   margin: 0 10px;
 }
-@media (max-width: 768px) {
-
+@media (max-width: 605px) {
+  .lg-but {
+    font-size: 12px;
+  }
+  .speaker-info {
+    padding: 10px;
+    height: 35%;
+  }
   .btn-register {   
     margin-bottom: 10px;
     border: 2px solid #008877;
     padding: 10px 15px;
     font-size: 18px;
   }
-
+  .btn-view {
+    position: absolute; 
+    bottom: 5px;
+    left: 10px;
+  }
   .imgbrand {
     max-width: 300px;
     height: auto;
     margin-left: 10px;
   }
+  .imgml {
+    max-width: 30px;
+    height: auto;
+    margin-left: 10px;
+  }
+
 
 .bg-dark-im{
-  max-width: 100%;
+  max-width: 605px
+}
+.bg-dark {
+  min-width: 100%;
+  padding: 0px;
 }
 
   .countdown-label, .registration-label {
@@ -460,7 +489,7 @@ body {
       font-size: 15px; 
   }
   .mycontainer {
-    width: 100%;
+    width:  100%;
     flex-direction: column;
     align-items: center;
     padding: 5px;
@@ -477,21 +506,11 @@ body {
     height: auto;
     margin-bottom: 7px;
   }
-  .language-selector {
-    position: absolute;
-    top: 20px;
-    left: 450px;
-  }
 
-  .lg-but {
-    font-size: 14px; 
-  }
-  .lg-but:hover {
-    font-size: 14.5px; 
-  }
+
 
   .agenda-container {
-    max-width: 100%; 
+    max-width:  100%; 
   }
 
   .agenda-date {
@@ -508,20 +527,6 @@ body {
     margin-bottom: 10px; 
     border-radius: 10px; 
     overflow: hidden;
-  }
-  .speaker-card p {
-    font-size: 11px; 
-  }
-  .speaker-card h5 {
-    font-size: 14px; 
-  }
-  .btn-view {
-    font-size: 14px; 
-  }
-  .btn-view:hover,
-  .btn-view:focus {
-      font-size: 15px;
-      color: #008877;
   }
 
   .img-i1 {
@@ -554,5 +559,13 @@ body {
     color: #015B50;
     border: 2px solid #015B50;
 }
-
+.speaker-name {
+  font-size: calc(1em + 0.6vw);
+  margin: 0;
 }
+.speaker-title {
+  font-size: calc(1em + 0.1vw);
+  margin: 3px;
+}
+}
+

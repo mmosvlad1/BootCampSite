@@ -91,7 +91,7 @@ const resources = {
       "AzureAIConceptsDescription": "Пропонує огляд Microsoft Azure AI і Generative AI.",
       "AzureDataServices": "Основи роботи з даними в Azure",
       "AzureDataServicesDescription": "Описує сервіси по роботі з даними в Microsoft Azure включаючи реляційні та нереляційні бази даних, сервіси аналітики та обробки даних, а також концепцію великих даних.",
-      "FeaturedSpeakers": "Спікери",
+      "FeaturedSpeakers": "Featured Speakers",
       "Speaker1Name": "Andriy Bilous",
       "Speaker1Title": "Chief Operation Officer at Uitware,",
       "Speaker1Title1": "Microsoft MVP",
@@ -101,7 +101,7 @@ const resources = {
       "Speaker3Name": "Stanislav Lebedenko",
       "Speaker3Title": "Cloud Architect, Microsoft MVP,",
       "Speaker3Title1": "Platform Engineer, DevOps",
-      "ViewProfile": "Переглянути Профіль",
+      "ViewProfile": "View Profile",
       
     }
   }
