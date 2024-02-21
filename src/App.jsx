@@ -14,17 +14,17 @@ function App() {
   const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();
   const [registerLink, setRegisterLink] = useState('');
-  const [imageUrl, setImageUrl] = useState('https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg'); 
+  const [imageUrl, setImageUrl] = useState('https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg');
   const [imClassName, setImClassName] = useState('img-i4');
 
   useEffect(() => {
     const hostname = window.location.hostname;
-    
+
     let link;
-    
+
     if (hostname === "lnu.azurebootcamp.uitware.com") {
       link = "https://forms.gle/8jzSJqPvCModTfNHA";
-      setImageUrl("https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg"); 
+      setImageUrl("https://itcluster.lviv.ua/wp-content/uploads/2023/03/lnu.svg");
       setImClassName("img-i4");
     } else if (hostname === "ucu.azurebootcamp.uitware.com") {
       link = "http://study.ucu.org.ua/course/azure-bootcamp/start";
@@ -32,15 +32,15 @@ function App() {
       setImClassName("img-i1");
     } else if (hostname === "lp.azurebootcamp.uitware.com") {
       link = "https://forms.gle/8jzSJqPvCModTfNHA";
-      setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg"); 
+      setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg");
       setImClassName("img-i2");
     } else {
       link = "default_link";
     }
-  
+
     setRegisterLink(link);
   }, []);
-  
+
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
@@ -118,7 +118,7 @@ function App() {
             <p>{t("PartnershipDetails")}</p>
             <p>{t("ParticipationOpportunity")}</p>
             <p>{t("UniversityDetermination")}</p>
-            <a id="registerBtn"  href={registerLink} className="btn-register" target="_blank">{t("RegisterButton")}</a>
+            <a id="registerBtn" href={registerLink} className="btn-register" target="_blank">{t("RegisterButton")}</a>
           </div>
           <div className="image-content">
             <img src={cloudImage} alt="Main Logo" />
@@ -148,7 +148,10 @@ function App() {
               <div className="agenda-date">04-08 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("IntroductionToAzureCloud")}</h3>
-                <h3 className="agenda-event-title">Andriy Bilous</h3>
+                <div className="speaker-container">
+                  <img src={nu1} alt="Andriy Bilous" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Andriy Bilous</h3>
+                </div>
                 <p className="agenda-description">{t("IntroductionToAzureCloudDescription")}</p>
               </div>
             </div>
@@ -176,7 +179,10 @@ function App() {
               <div className="agenda-date">25-29 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureArchitectureComponentsAndServices")}</h3>
-                <h2 className="agenda-event-title">Stanislav Lebedenko</h2>
+                <div className="speaker-container">
+                  <img src={nu3} alt="Andriy Bilous" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Stanislav Lebedenko</h3>
+                </div>
                 <p className="agenda-description">{t("AzureArchitectureComponentsAndServicesDescription")}</p>
               </div>
             </div>
@@ -186,7 +192,10 @@ function App() {
               <div className="agenda-date">01-05 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("ArchitectingSolutionsOnAzure")}</h3>
-                <h2 className="agenda-event-title">Orest Lavriv</h2>
+                <div className="speaker-container">
+                  <img src={nu2} alt="Andriy Bilous" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Orest Lavriv</h3>
+                </div>
                 <p className="agenda-description">{t("ArchitectingSolutionsOnAzureDescription")}</p>
               </div>
             </div>
@@ -244,8 +253,8 @@ function App() {
 
             <div className="speakers-container">
               <div className="speaker-cards-row">
-                                {/* Speaker 1 */}
-                                <div className="speaker-card">
+                {/* Speaker 1 */}
+                <div className="speaker-card">
                   <div className="speaker-image">
                     <img src={nu1} alt="Andriy Bilous" />
                   </div>
@@ -268,8 +277,8 @@ function App() {
                     <a href="https://www.linkedin.com/in/orest-l-74925992/" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
-                 {/* Speaker 3 */}
-                 <div className="speaker-card">
+                {/* Speaker 3 */}
+                <div className="speaker-card">
                   <div className="speaker-image">
                     <img src={nu3} alt="Stanislav Lebedenko" />
                   </div>
@@ -280,7 +289,7 @@ function App() {
                     <a href="https://www.linkedin.com/in/lebedenkostanislav/" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
-                </div>
+              </div>
             </div>
 
           </div>

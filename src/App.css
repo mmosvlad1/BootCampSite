@@ -101,6 +101,19 @@ body {
   min-width: 300px;
   width: 700px;
 }
+.speaker-photo {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  object-fit: cover;
+}
+.speaker-container {
+  display: flex;
+  align-items: center; 
+  gap: 5px; 
+}
 @media (max-width: 1000px) {
   .image-content img {
       display: none;
