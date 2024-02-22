@@ -162,6 +162,10 @@ function App() {
               <div className="agenda-date">11-15 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureManagement")}</h3>
+                <div className="speaker-container">
+                  <img src={nu4} alt="Magnus Martensson" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Magnus Martensson</h3>
+                </div>
                 <p className="agenda-description">{t("AzureManagementDescription")}</p>
               </div>
             </div>
@@ -206,10 +210,6 @@ function App() {
               <div className="agenda-date">08-12 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureAutomation")}</h3>
-                <div className="speaker-container">
-                  <img src={nu4} alt="Magnus Martensson" className="speaker-photo" />
-                  <h3 className="agenda-event-title">Magnus Martensson</h3>
-                </div>
                 <p className="agenda-description">{t("AzureAutomationDescription")}</p>
               </div>
             </div>
