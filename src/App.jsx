@@ -229,7 +229,7 @@ function App() {
             <hr className="agenda-divider" />
             {/* Azure AI Concepts */}
             <div className="agenda-item">
-              <div className="agenda-date">29.04-03.05</div>
+              <div className="agenda-date">29 {t("April")} - 03 {t("May")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureAIConcepts")}</h3>
                 <p className="agenda-description">{t("AzureAIConceptsDescription")}</p>
