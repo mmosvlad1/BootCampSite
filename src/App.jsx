@@ -4,6 +4,7 @@ import './App.css';
 import nu1 from './assets/nu1.png';
 import nu2 from './assets/nu2.jpg';
 import nu3 from './assets/nu3.jpg';
+import nu4 from './assets/nu4.jpg';
 import ml from './assets/ml.png';
 import brand from './assets/brand.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -205,6 +206,10 @@ function App() {
               <div className="agenda-date">08-12 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureAutomation")}</h3>
+                <div className="speaker-container">
+                  <img src={nu4} alt="Magnus Martensson" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Magnus Martensson</h3>
+                </div>
                 <p className="agenda-description">{t("AzureAutomationDescription")}</p>
               </div>
             </div>
@@ -287,6 +292,18 @@ function App() {
                     <p className="speaker-title">{t("Speaker3Title")}</p>
                     <p className="speaker-title">{t("Speaker3Title1")}</p>
                     <a href="https://www.linkedin.com/in/lebedenkostanislav/" className="btn-view">{t("ViewProfile")}</a>
+                  </div>
+                </div>
+                {/* Speaker 4 */}
+                <div className="speaker-card">
+                  <div className="speaker-image">
+                    <img src={nu4} alt="Magnus Martensson" />
+                  </div>
+                  <div className="speaker-info">
+                    <h5 className="speaker-name">Magnus Martensson</h5>
+                    <p className="speaker-title">Microsoft Azure Most Valuable</p>
+                    <p className="speaker-title">Professional MVP</p>
+                    <a href="https://www.linkedin.com/in/noopman" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
               </div>
