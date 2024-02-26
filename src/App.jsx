@@ -5,7 +5,7 @@ import nu1 from './assets/nu1.png';
 import nu2 from './assets/nu2.jpg';
 import nu3 from './assets/nu3.jpg';
 import nu4 from './assets/nu4.jpg';
-import ml from './assets/ml.png';
+import nu5 from './assets/nu5.jpeg';
 import brand from './assets/brand.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
@@ -162,6 +162,10 @@ function App() {
               <div className="agenda-date">11-15 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureManagement")}</h3>
+                <div className="speaker-container">
+                  <img src={nu4} alt="Magnus Martensson" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Magnus Martensson</h3>
+                </div>
                 <p className="agenda-description">{t("AzureManagementDescription")}</p>
               </div>
             </div>
@@ -171,10 +175,6 @@ function App() {
               <div className="agenda-date">18-22 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureCloudApplicationDevelopment")}</h3>
-                <div className="speaker-container">
-                  <img src={nu4} alt="Anton Boyko" className="speaker-photo" />
-                  <h3 className="agenda-event-title">Anton Boyko</h3>
-                </div>
                 <p className="agenda-description">{t("AzureCloudApplicationDevelopmentDescription")}</p>
               </div>
             </div>
@@ -246,6 +246,10 @@ function App() {
               <div className="agenda-date">06-10 {t("May")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureDataServices")}</h3>
+                <div className="speaker-container">
+                  <img src={nu5} alt="Taras Kloba" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Taras Kloba</h3>
+                </div>
                 <p className="agenda-description">{t("AzureDataServicesDescription")}</p>
               </div>
             </div>
@@ -257,7 +261,6 @@ function App() {
           <div className="speakers-wrapper">
 
             <div className="speakers-container">
-              <div className="speaker-cards-row">
                 {/* Speaker 1 */}
                 <div className="speaker-card">
                   <div className="speaker-image">
@@ -297,18 +300,28 @@ function App() {
                 {/* Speaker 4 */}
                 <div className="speaker-card">
                   <div className="speaker-image">
-                    <img src={nu4} alt="Anton Boyko" />
+                    <img src={nu4} alt="Magnus Martensson" />
                   </div>
                   <div className="speaker-info">
-                    <h5 className="speaker-name">Anton Boyko</h5>
-                    <p className="speaker-title">CIO, Principal Architect</p>
-                    <p className="speaker-title">Microsoft MVP, RD</p>
+                    <h5 className="speaker-name">Magnus Martensson</h5>
+                    <p className="speaker-title">Microsoft Azure Most Valuable</p>
+                    <p className="speaker-title">Professional MVP</p>
                     <a href="https://www.linkedin.com/in/boykoant/" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
+                {/* Speaker 5 */}
+                <div className="speaker-card">
+                  <div className="speaker-image">
+                    <img src={nu5} alt="Taras Kloba" />
+                  </div>
+                  <div className="speaker-info">
+                    <h5 className="speaker-name">Taras Kloba</h5>
+                    <p className="speaker-title">Associate Director, PhD, MVP</p>
+                    <p className="speaker-title">Data & Analytics at SoftServe</p>
+                    <a href="https://www.linkedin.com/in/kloba/" className="btn-view">{t("ViewProfile")}</a>
+                  </div>
+                </div>
               </div>
-            </div>
-
           </div>
         </div>
 
