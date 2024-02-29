@@ -36,7 +36,12 @@ function App() {
       link = "https://forms.gle/4a1pAL8zbPKSVL4y7";
       setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg");
       setImClassName("img-i2");
-    } else {
+    }     
+    else if (hostname === "itstep.azurebootcamp.uitware.com") {
+      link = "https://forms.gle/KTcz68SwQotuTLxHA";
+      setImageUrl("https://itcluster.lviv.ua/wp-content/uploads/2022/12/it_step.png");
+      setImClassName("img-i4");
+    }else {
       link = "default_link";
     }
 
