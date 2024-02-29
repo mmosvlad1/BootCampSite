@@ -101,7 +101,7 @@ const resources = {
       "Speaker3Name": "Stanislav Lebedenko",
       "Speaker3Title": "Cloud Architect at Solidify,",
       "Speaker3Title1": "Microsoft MVP",
-      "ViewProfile": "View Profile",
+      "ViewProfile": "Профіль",
       
     }
   }

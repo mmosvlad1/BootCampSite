@@ -6,6 +6,7 @@ import nu2 from './assets/nu2.jpg';
 import nu3 from './assets/nu3.jpg';
 import nu4 from './assets/nu4.jpg';
 import nu5 from './assets/nu5.jpeg';
+import nu6 from './assets/nu6.png';
 import brand from './assets/brand.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
@@ -210,6 +211,10 @@ function App() {
               <div className="agenda-date">08-12 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureAutomation")}</h3>
+                <div className="speaker-container">
+                  <img src={nu6} alt="Leonid Chetverikov" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Leonid Chetverikov</h3>
+                </div>
                 <p className="agenda-description">{t("AzureAutomationDescription")}</p>
               </div>
             </div>
@@ -319,6 +324,18 @@ function App() {
                     <p className="speaker-title">Associate Director, PhD, MVP</p>
                     <p className="speaker-title">Data & Analytics at SoftServe</p>
                     <a href="https://www.linkedin.com/in/kloba/" className="btn-view">{t("ViewProfile")}</a>
+                  </div>
+                </div>
+                {/* Speaker 6 */}
+                <div className="speaker-card">
+                  <div className="speaker-image">
+                    <img src={nu6} alt="Leonid Chetverikov" />
+                  </div>
+                  <div className="speaker-info">
+                    <h5 className="speaker-name">Leonid Chetverikov</h5>
+                    <p className="speaker-title">DevOps Tech Lead</p>
+                    <p className="speaker-title">at EPAM</p>
+                    <a href="https://www.linkedin.com/in/leonid-chetverikov-82b91a21/" className="btn-view">{t("ViewProfile")}</a>
                   </div>
                 </div>
               </div>
