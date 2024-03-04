@@ -7,6 +7,7 @@ import nu3 from './assets/nu3.jpg';
 import nu4 from './assets/nu4.jpg';
 import nu5 from './assets/nu5.jpeg';
 import nu6 from './assets/nu6.png';
+import nu7 from './assets/nu7.png';
 import brand from './assets/brand.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
@@ -36,12 +37,12 @@ function App() {
       link = "https://forms.gle/4a1pAL8zbPKSVL4y7";
       setImageUrl("https://upload.wikimedia.org/wikipedia/commons/f/ff/Nulp_logo_ukr.svg");
       setImClassName("img-i2");
-    }     
+    }
     else if (hostname === "itstep.azurebootcamp.uitware.com") {
       link = "https://forms.gle/KTcz68SwQotuTLxHA";
       setImageUrl("https://itcluster.lviv.ua/wp-content/uploads/2022/12/it_step.png");
       setImClassName("img-i4");
-    }else {
+    } else {
       link = "default_link";
     }
 
@@ -168,6 +169,10 @@ function App() {
               <div className="agenda-date">11-15 {t("March")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureManagement")}</h3>
+                <div className="speaker-container">
+                  <img src={nu7} alt="Christoffer Noring" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Christoffer Noring</h3>
+                </div>
                 <p className="agenda-description">{t("AzureManagementDescription")}</p>
               </div>
             </div>
@@ -271,79 +276,91 @@ function App() {
           <div className="speakers-wrapper">
 
             <div className="speakers-container">
-                {/* Speaker 1 */}
-                <div className="speaker-card">
-                  <div className="speaker-image">
-                    <img src={nu1} alt="Andriy Bilous" />
-                  </div>
-                  <div className="speaker-info">
-                    <h5 className="speaker-name">{t("Speaker1Name")}</h5>
-                    <p className="speaker-title">{t("Speaker1Title")}</p>
-                    <p className="speaker-title">{t("Speaker1Title1")}</p>
-                    <a href="https://www.linkedin.com/in/andriy-bilous-32718aa7/" className="btn-view">{t("ViewProfile")}</a>
-                  </div>
+              {/* Speaker 1 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu1} alt="Andriy Bilous" />
                 </div>
-                {/* Speaker 2 */}
-                <div className="speaker-card">
-                  <div className="speaker-image">
-                    <img src={nu2} alt="Orest Lavriv" />
-                  </div>
-                  <div className="speaker-info">
-                    <h5 className="speaker-name">{t("Speaker2Name")}</h5>
-                    <p className="speaker-title">{t("Speaker2Title")}</p>
-                    <p className="speaker-title">{t("Speaker2Title1")}</p>
-                    <a href="https://www.linkedin.com/in/orest-l-74925992/" className="btn-view">{t("ViewProfile")}</a>
-                  </div>
-                </div>
-                {/* Speaker 3 */}
-                <div className="speaker-card">
-                  <div className="speaker-image">
-                    <img src={nu3} alt="Stanislav Lebedenko" />
-                  </div>
-                  <div className="speaker-info">
-                    <h5 className="speaker-name">{t("Speaker3Name")}</h5>
-                    <p className="speaker-title">{t("Speaker3Title")}</p>
-                    <p className="speaker-title">{t("Speaker3Title1")}</p>
-                    <a href="https://www.linkedin.com/in/lebedenkostanislav/" className="btn-view">{t("ViewProfile")}</a>
-                  </div>
-                </div>
-                {/* Speaker 4 */}
-                <div className="speaker-card">
-                  <div className="speaker-image">
-                    <img src={nu4} alt="Anton Boyko" />
-                  </div>
-                  <div className="speaker-info">
-                  <h5 className="speaker-name">Anton Boyko</h5>
-                    <p className="speaker-title">CIO, Principal Architect</p>
-                    <p className="speaker-title">Microsoft MVP, RD</p>
-                    <a href="https://www.linkedin.com/in/boykoant/" className="btn-view">{t("ViewProfile")}</a>
-                  </div>
-                </div>
-                {/* Speaker 5 */}
-                <div className="speaker-card">
-                  <div className="speaker-image">
-                    <img src={nu5} alt="Taras Kloba" />
-                  </div>
-                  <div className="speaker-info">
-                    <h5 className="speaker-name">Taras Kloba</h5>
-                    <p className="speaker-title">Associate Director, PhD, MVP</p>
-                    <p className="speaker-title">Data & Analytics at SoftServe</p>
-                    <a href="https://www.linkedin.com/in/kloba/" className="btn-view">{t("ViewProfile")}</a>
-                  </div>
-                </div>
-                {/* Speaker 6 */}
-                <div className="speaker-card">
-                  <div className="speaker-image">
-                    <img src={nu6} alt="Leonid Chetverikov" />
-                  </div>
-                  <div className="speaker-info">
-                    <h5 className="speaker-name">Leonid Chetverikov</h5>
-                    <p className="speaker-title">DevOps Tech Lead</p>
-                    <p className="speaker-title">at EPAM</p>
-                    <a href="https://www.linkedin.com/in/leonid-chetverikov-82b91a21/" className="btn-view">{t("ViewProfile")}</a>
-                  </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">{t("Speaker1Name")}</h5>
+                  <p className="speaker-title">{t("Speaker1Title")}</p>
+                  <p className="speaker-title">{t("Speaker1Title1")}</p>
+                  <a href="https://www.linkedin.com/in/andriy-bilous-32718aa7/" className="btn-view">{t("ViewProfile")}</a>
                 </div>
               </div>
+              {/* Speaker 2 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu2} alt="Orest Lavriv" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">{t("Speaker2Name")}</h5>
+                  <p className="speaker-title">{t("Speaker2Title")}</p>
+                  <p className="speaker-title">{t("Speaker2Title1")}</p>
+                  <a href="https://www.linkedin.com/in/orest-l-74925992/" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+              {/* Speaker 3 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu3} alt="Stanislav Lebedenko" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">{t("Speaker3Name")}</h5>
+                  <p className="speaker-title">{t("Speaker3Title")}</p>
+                  <p className="speaker-title">{t("Speaker3Title1")}</p>
+                  <a href="https://www.linkedin.com/in/lebedenkostanislav/" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+              {/* Speaker 4 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu4} alt="Anton Boyko" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">Anton Boyko</h5>
+                  <p className="speaker-title">CIO, Principal Architect</p>
+                  <p className="speaker-title">Microsoft MVP, RD</p>
+                  <a href="https://www.linkedin.com/in/boykoant/" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+              {/* Speaker 5 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu5} alt="Taras Kloba" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">Taras Kloba</h5>
+                  <p className="speaker-title">Associate Director, PhD, MVP</p>
+                  <p className="speaker-title">Data & Analytics at SoftServe</p>
+                  <a href="https://www.linkedin.com/in/kloba/" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+              {/* Speaker 6 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu6} alt="Leonid Chetverikov" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">Leonid Chetverikov</h5>
+                  <p className="speaker-title">DevOps Tech Lead</p>
+                  <p className="speaker-title">at EPAM</p>
+                  <a href="https://www.linkedin.com/in/leonid-chetverikov-82b91a21/" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+              {/* Speaker 7 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu7} alt="Christoffer Noring" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">Christoffer Noring</h5>
+                  <p className="speaker-title">Senior Cloud Advocate</p>
+                  <p className="speaker-title">at Microsoft</p>
+                  <a href="https://www.linkedin.com/in/christoffer-noring-3257061/?originalSubdomain=uk" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
