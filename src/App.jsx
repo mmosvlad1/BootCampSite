@@ -320,7 +320,7 @@ function App() {
                 <div className="speaker-info">
                   <h5 className="speaker-name">Anton Boyko</h5>
                   <p className="speaker-title">CIO, Principal Architect</p>
-                  <p className="speaker-title">Microsoft MVP, RD</p>
+                  <p className="speaker-title">Microsoft MVP, RD, Academic Director</p>
                   <a href="https://www.linkedin.com/in/boykoant/" className="btn-view">{t("ViewProfile")}</a>
                 </div>
               </div>
