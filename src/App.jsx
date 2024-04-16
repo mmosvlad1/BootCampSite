@@ -8,6 +8,8 @@ import nu4 from './assets/nu4.jpg';
 import nu5 from './assets/nu5.jpeg';
 import nu6 from './assets/nu6.png';
 import nu7 from './assets/nu7.png';
+import nu8 from './assets/nu8.jpg';
+import nu9 from './assets/nu9.jpg';
 import brand from './assets/brand.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
@@ -234,6 +236,10 @@ function App() {
               <div className="agenda-date">15-19 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureDevOpsServices")}</h3>
+                <div className="speaker-container">
+                  <img src={nu1} alt="Andriy Bilous" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Andriy Bilous</h3>
+                </div>
                 <p className="agenda-description">{t("AzureDevOpsServicesDescription")}</p>
               </div>
             </div>
@@ -243,6 +249,10 @@ function App() {
               <div className="agenda-date">22-26 {t("April")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureSecurityAndPrivacy")}</h3>
+                <div className="speaker-container">
+                  <img src={nu9} alt="Sarah Young" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Sarah Young</h3>
+                </div>
                 <p className="agenda-description">{t("AzureSecurityAndPrivacyDescription")}</p>
               </div>
             </div>
@@ -252,6 +262,10 @@ function App() {
               <div className="agenda-date">29 {t("April")} - 03 {t("May")}</div>
               <div className="agenda-details">
                 <h3 className="agenda-event-title">{t("AzureAIConcepts")}</h3>
+                <div className="speaker-container">
+                  <img src={nu8} alt="Pablo Nunes Lopes" className="speaker-photo" />
+                  <h3 className="agenda-event-title">Pablo Nunes Lopes</h3>
+                </div>
                 <p className="agenda-description">{t("AzureAIConceptsDescription")}</p>
               </div>
             </div>
@@ -358,6 +372,30 @@ function App() {
                   <p className="speaker-title">Senior Cloud Advocate</p>
                   <p className="speaker-title">at Microsoft</p>
                   <a href="https://www.linkedin.com/in/christoffer-noring-3257061/?originalSubdomain=uk" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+              {/* Speaker 8 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu8} alt="Pablo Nunes Lopes" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">Pablo Nunes Lopesg</h5>
+                  <p className="speaker-title">Global Cloud Advocate at Microsoft</p>
+                  <p className="speaker-title">Cloud + AI + Python/.NET </p>
+                  <a href="https://www.linkedin.com/in/pablonuneslopes/" className="btn-view">{t("ViewProfile")}</a>
+                </div>
+              </div>
+              {/* Speaker 9 */}
+              <div className="speaker-card">
+                <div className="speaker-image">
+                  <img src={nu9} alt="Sarah Young" />
+                </div>
+                <div className="speaker-info">
+                  <h5 className="speaker-name">Sarah Young</h5>
+                  <p className="speaker-title">Senior Cloud Security Advocate</p>
+                  <p className="speaker-title">at Microsoft</p>
+                  <a href="https://www.linkedin.com/in/sarahyo16/" className="btn-view">{t("ViewProfile")}</a>
                 </div>
               </div>
             </div>
