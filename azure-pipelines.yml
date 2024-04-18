@@ -1,0 +1,35 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- upload: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+  artifact: 'drop'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'c6e1be95-0f5c-4c9b-b007-82195b22dcc9'
+    appType: 'webApp'
+    WebAppName: 'azure-boo'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
